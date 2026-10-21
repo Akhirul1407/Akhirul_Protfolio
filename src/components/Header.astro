@@ -15,60 +15,74 @@ const isActive = (href: string) => {
 };
 ---
 
-<header class="sticky top-0 z-50 w-full border-b border-[#26262F]/80 bg-[#0A0A0F]/85 backdrop-blur-md transition-colors duration-200">
-  <div class="mx-auto flex h-20 max-w-[1120px] items-center justify-between px-6">
-    <!-- Brand / Logo -->
+<header class="sticky top-0 z-50 w-full px-4 pt-3.5 pb-2 transition-all duration-300 md:px-6">
+  <!-- Floating Glass Island Capsule -->
+  <div class="mx-auto flex h-16 max-w-[1120px] items-center justify-between rounded-full border border-[#26262F]/90 bg-[#13131A]/85 px-4 sm:px-6 shadow-[0_12px_36px_rgba(0,0,0,0.45)] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.07)] backdrop-blur-xl transition-all duration-300 hover:border-[#3A3A46]">
+    
+    <!-- Brand / Logo Mark -->
     <a
       href="/"
-      class="group flex items-center gap-3.5 focus-visible:outline-lime-400"
+      class="group flex items-center gap-3 focus-visible:outline-lime-400"
       aria-label={`${siteConfig.name} - Home`}
     >
-      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#C6F432] text-[#0A0A0F] shadow-sm transition-transform duration-200 group-hover:scale-105">
-        <span class="font-['Space_Grotesk'] text-lg font-bold tracking-tight">{siteConfig.initials}</span>
+      <div class="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#C6F432] to-[#B0E61A] text-[#0A0A0F] shadow-[0_0_14px_rgba(198,244,50,0.35)] ring-1 ring-[#C6F432]/40 transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_22px_rgba(198,244,50,0.6)]">
+        <span class="font-['Space_Grotesk'] text-base font-extrabold tracking-tight">{siteConfig.initials}</span>
       </div>
       <div class="flex flex-col">
-        <span class="font-['Space_Grotesk'] text-base font-bold tracking-tight text-[#F4F4F5] transition-colors group-hover:text-[#C6F432]">
-          {siteConfig.shortName}
+        <div class="flex items-center gap-2">
+          <span class="font-['Space_Grotesk'] text-sm font-bold tracking-tight text-[#F4F4F5] transition-colors group-hover:text-[#C6F432]">
+            {siteConfig.shortName}
+          </span>
+          <span class="hidden h-1.5 w-1.5 rounded-full bg-[#C6F432] sm:inline-block animate-pulse"></span>
+        </div>
+        <span class="hidden text-[11px] font-medium text-[#A1A1AA] sm:block">
+          {siteConfig.title} · Travel Tech
         </span>
-        <span class="text-xs text-[#A1A1AA]">{siteConfig.title}</span>
       </div>
     </a>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden items-center gap-8 md:flex" aria-label="Main Navigation">
-      <ul class="flex items-center gap-7 text-sm font-medium">
+    <!-- Desktop Navigation: Pill Island Style -->
+    <nav class="hidden items-center gap-2 md:flex" aria-label="Main Navigation">
+      <div class="flex items-center gap-1 rounded-full border border-[#26262F]/70 bg-[#0A0A0F]/60 p-1 backdrop-blur-md">
         {
           siteConfig.navLinks.map((link) => {
             const active = isActive(link.href);
             return (
-              <li>
-                <a
-                  href={link.href}
-                  class:list={[
-                    "relative py-1 transition-colors duration-200",
-                    active
-                      ? "text-[#C6F432] font-semibold"
-                      : "text-[#A1A1AA] hover:text-[#F4F4F5]"
-                  ]}
-                  aria-current={active ? "page" : undefined}
-                >
-                  {link.label}
-                  {active && (
-                    <span class="absolute -bottom-1.5 left-0 right-0 h-[2px] rounded-full bg-[#C6F432]" />
-                  )}
-                </a>
-              </li>
+              <a
+                href={link.href}
+                class:list={[
+                  "relative rounded-full px-4 py-1.5 text-xs font-medium transition-all duration-200",
+                  active
+                    ? "bg-[#1C1C26] text-[#C6F432] font-semibold border border-[#3A3A46]/60 shadow-[0_0_12px_rgba(198,244,50,0.15)]"
+                    : "text-[#A1A1AA] hover:bg-[#1C1C26]/50 hover:text-[#F4F4F5]"
+                ]}
+                aria-current={active ? "page" : undefined}
+              >
+                <span>{link.label}</span>
+              </a>
             );
           })
         }
-      </ul>
+      </div>
 
-      <!-- CTA Button: lime-outlined pill -->
+      <!-- Divider -->
+      <div class="h-4 w-[1px] bg-[#26262F] mx-2"></div>
+
+      <!-- CTA Button: Lime Outlined Pill with Micro-Interaction -->
       <a
         href="/contact"
-        class="inline-flex items-center justify-center rounded-full border border-[#C6F432] px-5 py-2.5 text-sm font-semibold text-[#C6F432] transition-all duration-200 hover:bg-[#C6F432] hover:text-[#0A0A0F] hover:shadow-[0_0_20px_rgba(198,244,50,0.3)]"
+        class="group inline-flex items-center gap-1.5 rounded-full border border-[#C6F432] bg-[#C6F432]/10 px-4 py-1.5 text-xs font-bold text-[#C6F432] transition-all duration-200 hover:bg-[#C6F432] hover:text-[#0A0A0F] hover:shadow-[0_0_24px_rgba(198,244,50,0.4)] hover:scale-105"
       >
-        Let's talk
+        <span>Let's talk</span>
+        <svg
+          class="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
       </a>
     </nav>
 
@@ -76,28 +90,28 @@ const isActive = (href: string) => {
     <button
       id="mobile-menu-toggle"
       type="button"
-      class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#26262F] bg-[#13131A] text-[#F4F4F5] transition-colors hover:border-[#3A3A46] hover:text-[#C6F432] md:hidden"
+      class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#26262F] bg-[#1C1C26]/80 text-[#F4F4F5] transition-all hover:border-[#C6F432] hover:text-[#C6F432] md:hidden"
       aria-expanded="false"
       aria-controls="mobile-menu"
       aria-label="Open main menu"
     >
-      <svg id="hamburger-icon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <svg id="hamburger-icon" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
-      <svg id="close-icon" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <svg id="close-icon" class="hidden h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </div>
 
-  <!-- Mobile Collapsible Menu -->
+  <!-- Mobile Collapsible Menu (Floating Card) -->
   <div
     id="mobile-menu"
-    class="hidden border-b border-[#26262F] bg-[#0A0A0F]/95 px-6 py-6 backdrop-blur-xl md:hidden"
+    class="hidden mx-auto mt-2 max-w-[1120px] rounded-3xl border border-[#26262F] bg-[#13131A]/95 p-5 shadow-2xl backdrop-blur-2xl md:hidden transition-all duration-300"
     aria-hidden="true"
   >
-    <nav class="flex flex-col gap-4" aria-label="Mobile Navigation">
-      <ul class="flex flex-col gap-3 text-base font-medium">
+    <nav class="flex flex-col gap-3" aria-label="Mobile Navigation">
+      <ul class="flex flex-col gap-1.5 text-sm font-medium">
         {
           siteConfig.navLinks.map((link) => {
             const active = isActive(link.href);
@@ -106,15 +120,15 @@ const isActive = (href: string) => {
                 <a
                   href={link.href}
                   class:list={[
-                    "flex items-center justify-between rounded-xl px-4 py-3 transition-colors",
+                    "flex items-center justify-between rounded-2xl px-4 py-3 transition-colors",
                     active
-                      ? "bg-[#13131A] text-[#C6F432] font-semibold border border-[#26262F]"
-                      : "text-[#A1A1AA] hover:bg-[#13131A] hover:text-[#F4F4F5]"
+                      ? "bg-[#1C1C26] text-[#C6F432] font-semibold border border-[#3A3A46]"
+                      : "text-[#A1A1AA] hover:bg-[#1C1C26]/60 hover:text-[#F4F4F5]"
                   ]}
                   aria-current={active ? "page" : undefined}
                 >
                   <span>{link.label}</span>
-                  {active && <span class="h-2 w-2 rounded-full bg-[#C6F432]" />}
+                  {active && <span class="h-2 w-2 rounded-full bg-[#C6F432] shadow-[0_0_8px_rgba(198,244,50,0.8)]" />}
                 </a>
               </li>
             );
@@ -122,12 +136,15 @@ const isActive = (href: string) => {
         }
       </ul>
 
-      <div class="mt-2 pt-4 border-t border-[#26262F]">
+      <div class="mt-2 pt-3 border-t border-[#26262F]">
         <a
           href="/contact"
-          class="flex w-full items-center justify-center rounded-full border border-[#C6F432] bg-[#C6F432] px-5 py-3 text-sm font-bold text-[#0A0A0F] transition-all hover:bg-transparent hover:text-[#C6F432]"
+          class="flex w-full items-center justify-center gap-2 rounded-full bg-[#C6F432] px-5 py-3 text-sm font-bold text-[#0A0A0F] shadow-[0_0_20px_rgba(198,244,50,0.3)] transition-all hover:bg-white"
         >
-          Let's talk
+          <span>Let's talk</span>
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
         </a>
       </div>
     </nav>
