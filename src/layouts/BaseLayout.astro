@@ -1,0 +1,79 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { siteConfig } from "../config/site";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+}
+
+const {
+  title = `${siteConfig.name} · ${siteConfig.title}`,
+  description = siteConfig.description,
+  image = "/og-image.png",
+  article = false,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || siteConfig.siteUrl);
+const pageTitle = title.includes(siteConfig.shortName) ? title : `${title} · ${siteConfig.shortName}`;
+---
+
+<!doctype html>
+<html lang="en" class="bg-[#0A0A0F] text-[#F4F4F5]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={description} />
+    <meta name="author" content={siteConfig.name} />
+    <meta name="theme-color" content="#0A0A0F" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={article ? "article" : "website"} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, canonicalURL)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, canonicalURL)} />
+
+    <!-- Astro View Transitions -->
+    <ClientRouter />
+
+    <slot name="head" />
+  </head>
+  <body class="flex min-h-screen flex-col bg-[#0A0A0F] text-[#F4F4F5] selection:bg-[#C6F432] selection:text-[#0A0A0F]">
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">
+      Skip to main content
+    </a>
+
+    <!-- Shared Header -->
+    <Header currentPath={Astro.url.pathname} />
+
+    <!-- Main Page Content -->
+    <main id="main-content" class="flex-1 focus:outline-none">
+      <slot />
+    </main>
+
+    <!-- Shared Footer -->
+    <Footer />
+  </body>
+</html>

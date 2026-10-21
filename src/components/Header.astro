@@ -1,0 +1,184 @@
+---
+import { siteConfig } from "../config/site";
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = Astro.url.pathname } = Astro.props;
+
+// Helper to test active link
+const isActive = (href: string) => {
+  if (href === "/" && currentPath === "/") return true;
+  if (href !== "/" && currentPath.startsWith(href)) return true;
+  return false;
+};
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-[#26262F]/80 bg-[#0A0A0F]/85 backdrop-blur-md transition-colors duration-200">
+  <div class="mx-auto flex h-20 max-w-[1120px] items-center justify-between px-6">
+    <!-- Brand / Logo -->
+    <a
+      href="/"
+      class="group flex items-center gap-3.5 focus-visible:outline-lime-400"
+      aria-label={`${siteConfig.name} - Home`}
+    >
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#C6F432] text-[#0A0A0F] shadow-sm transition-transform duration-200 group-hover:scale-105">
+        <span class="font-['Space_Grotesk'] text-lg font-bold tracking-tight">{siteConfig.initials}</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-['Space_Grotesk'] text-base font-bold tracking-tight text-[#F4F4F5] transition-colors group-hover:text-[#C6F432]">
+          {siteConfig.shortName}
+        </span>
+        <span class="text-xs text-[#A1A1AA]">{siteConfig.title}</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden items-center gap-8 md:flex" aria-label="Main Navigation">
+      <ul class="flex items-center gap-7 text-sm font-medium">
+        {
+          siteConfig.navLinks.map((link) => {
+            const active = isActive(link.href);
+            return (
+              <li>
+                <a
+                  href={link.href}
+                  class:list={[
+                    "relative py-1 transition-colors duration-200",
+                    active
+                      ? "text-[#C6F432] font-semibold"
+                      : "text-[#A1A1AA] hover:text-[#F4F4F5]"
+                  ]}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {link.label}
+                  {active && (
+                    <span class="absolute -bottom-1.5 left-0 right-0 h-[2px] rounded-full bg-[#C6F432]" />
+                  )}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+
+      <!-- CTA Button: lime-outlined pill -->
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center rounded-full border border-[#C6F432] px-5 py-2.5 text-sm font-semibold text-[#C6F432] transition-all duration-200 hover:bg-[#C6F432] hover:text-[#0A0A0F] hover:shadow-[0_0_20px_rgba(198,244,50,0.3)]"
+      >
+        Let's talk
+      </a>
+    </nav>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button
+      id="mobile-menu-toggle"
+      type="button"
+      class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#26262F] bg-[#13131A] text-[#F4F4F5] transition-colors hover:border-[#3A3A46] hover:text-[#C6F432] md:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Open main menu"
+    >
+      <svg id="hamburger-icon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="close-icon" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Collapsible Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden border-b border-[#26262F] bg-[#0A0A0F]/95 px-6 py-6 backdrop-blur-xl md:hidden"
+    aria-hidden="true"
+  >
+    <nav class="flex flex-col gap-4" aria-label="Mobile Navigation">
+      <ul class="flex flex-col gap-3 text-base font-medium">
+        {
+          siteConfig.navLinks.map((link) => {
+            const active = isActive(link.href);
+            return (
+              <li>
+                <a
+                  href={link.href}
+                  class:list={[
+                    "flex items-center justify-between rounded-xl px-4 py-3 transition-colors",
+                    active
+                      ? "bg-[#13131A] text-[#C6F432] font-semibold border border-[#26262F]"
+                      : "text-[#A1A1AA] hover:bg-[#13131A] hover:text-[#F4F4F5]"
+                  ]}
+                  aria-current={active ? "page" : undefined}
+                >
+                  <span>{link.label}</span>
+                  {active && <span class="h-2 w-2 rounded-full bg-[#C6F432]" />}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+
+      <div class="mt-2 pt-4 border-t border-[#26262F]">
+        <a
+          href="/contact"
+          class="flex w-full items-center justify-center rounded-full border border-[#C6F432] bg-[#C6F432] px-5 py-3 text-sm font-bold text-[#0A0A0F] transition-all hover:bg-transparent hover:text-[#C6F432]"
+        >
+          Let's talk
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  function initMobileMenu() {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (!toggleBtn || !mobileMenu || !hamburgerIcon || !closeIcon) return;
+
+    let isOpen = false;
+
+    function toggleMenu(show?: boolean) {
+      isOpen = typeof show === 'boolean' ? show : !isOpen;
+      toggleBtn?.setAttribute('aria-expanded', String(isOpen));
+      toggleBtn?.setAttribute('aria-label', isOpen ? 'Close main menu' : 'Open main menu');
+      mobileMenu?.setAttribute('aria-hidden', String(!isOpen));
+
+      if (isOpen) {
+        mobileMenu?.classList.remove('hidden');
+        hamburgerIcon?.classList.add('hidden');
+        closeIcon?.classList.remove('hidden');
+      } else {
+        mobileMenu?.classList.add('hidden');
+        hamburgerIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      }
+    }
+
+    toggleBtn.addEventListener('click', () => toggleMenu());
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        toggleMenu(false);
+        toggleBtn.focus();
+      }
+    });
+
+    // Close when clicking nav links
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => toggleMenu(false));
+    });
+  }
+
+  // Initialize on load and on Astro view transition navigations
+  initMobileMenu();
+  document.addEventListener('astro:page-load', initMobileMenu);
+</script>

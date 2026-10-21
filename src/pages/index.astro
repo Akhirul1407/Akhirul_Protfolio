@@ -1,16 +1,21 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../config/site";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={`${siteConfig.name} · ${siteConfig.title}`}>
+  <div class="mx-auto max-w-[1120px] px-6 py-20">
+    <div class="rounded-3xl border border-[#26262F] bg-[#13131A] p-12 text-center">
+      <span class="label-caps mb-4">
+        <span class="pulsing-dot"></span>
+        {siteConfig.title} · {siteConfig.company}
+      </span>
+      <h1 class="hero-h1 mb-6 text-[#F4F4F5]">
+        {siteConfig.headline}
+      </h1>
+      <p class="body-lead mx-auto text-[#A1A1AA]">
+        {siteConfig.introLine}
+      </p>
+    </div>
+  </div>
+</BaseLayout>
