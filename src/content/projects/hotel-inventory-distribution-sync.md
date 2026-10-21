@@ -1,9 +1,9 @@
 ---
 number: "02"
 outcomeHeadline: "Real-time hotel inventory distribution synchronized with zero booking collisions"
-oneLiner: "Orchestrated continuous reconciliation cycles for an online travel agency in [region], cutting stale room inventory errors to near zero."
+oneLiner: "Orchestrated continuous reconciliation cycles for a high-volume platform in [region], cutting stale inventory sync errors to near zero."
 category: "Client onboarding"
-clientGeneric: "Online travel agency in [region]"
+clientGeneric: "High-volume digital platform in [region]"
 role: "Project Manager"
 team: "8 backend developers, 2 QA, 1 Solution Architect"
 tools:
@@ -24,9 +24,9 @@ featured: true
 
 ## Context & Background
 
-An online travel agency operating in [region] faced mounting customer complaints due to rate-parity and inventory-availability discrepancies. When hotel partners updated room allotments or blackout dates, downstream consumer portals experienced delayed synchronization of up to 45 minutes, leading to accidental double-bookings.
+A high-volume platform operating in [region] faced mounting customer complaints due to rate-parity and inventory-availability discrepancies. When merchant partners updated stock allotments or catalog dates, downstream consumer portals experienced delayed synchronization of up to 45 minutes, leading to accidental transaction collisions.
 
-The objective was to architect and onboard an asynchronous two-way webhook distribution service across [ADD: 300+] regional accommodation suppliers without disrupting day-to-day transaction processing.
+The objective was to architect and onboard an asynchronous two-way webhook distribution service across [ADD: 300+] regional partner endpoints without disrupting day-to-day transaction processing.
 
 ## What I Did
 
@@ -37,11 +37,11 @@ The objective was to architect and onboard an asynchronous two-way webhook distr
 
 ## Results & Impact
 
-- **Zero Overbooking Collisions**: Eradicated out-of-sync room bookings across the peak travel quarter.
+- **Zero Transaction Collisions**: Eradicated out-of-sync inventory transactions across the peak traffic quarter.
 - **[ADD: 99.9%] Availability Accuracy**: Real-time rate sync latency dropped from 45 minutes to sub-second notifications.
-- **Standardized Client Onboarding**: Reduced developer support overhead during hotel partner setups by [ADD: 65%].
+- **Standardized Client Onboarding**: Reduced developer support overhead during partner setups by [ADD: 65%].
 
 ## Lessons Learned
 
 1. **Self-Service Testing Cuts Support In Half**: Giving client developers an automated sandbox validation tool removes 80% of back-and-forth email debugging.
-2. **Idempotency Is Mandatory In Travel**: High-frequency rate updates must always be idempotent to prevent race conditions during network interruptions.
+2. **Idempotency Is Mandatory In High-Throughput Systems**: High-frequency state updates must always be idempotent to prevent race conditions during network interruptions.

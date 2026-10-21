@@ -1,9 +1,9 @@
 ---
 number: "03"
-outcomeHeadline: "Cutover of mission-critical travel ERP completed with zero transaction interruption"
-oneLiner: "Led release planning, mock rehearsals, and midnight deployment cutover for an enterprise travel operator in [region]."
+outcomeHeadline: "Cutover of mission-critical enterprise ERP completed with zero transaction interruption"
+oneLiner: "Led release planning, mock rehearsals, and midnight deployment cutover for an enterprise operations client in [region]."
 category: "Team leadership"
-clientGeneric: "Enterprise travel operator in [region]"
+clientGeneric: "Enterprise operations client in [region]"
 role: "Project Manager & Release Coordinator"
 team: "15 engineers, 3 DevOps specialists, 4 Business Analysts"
 tools:
@@ -25,9 +25,9 @@ featured: true
 
 ## Context & Background
 
-An enterprise travel operator with extensive regional booking volume was running on a legacy ERP that suffered from severe database locks during month-end invoicing. To support modern B2B travel sub-agents, the executive board mandated migrating all accounts, active bookings, and voucher generation to a modern cloud-native travel operations platform.
+An enterprise client with extensive regional transactional volume was running on a legacy ERP that suffered from severe database locks during month-end invoicing. To support modern B2B systems and automated reporting, the executive board mandated migrating all accounts, active records, and voucher generation to a modern cloud-native enterprise operations platform.
 
-The primary risk: any migration failure or data corruption would immediately strand real passengers at airport check-ins and hotel desks.
+The primary risk: any migration failure or data corruption would immediately disrupt live business operations and customer checkout services.
 
 ## What I Did
 
@@ -39,7 +39,7 @@ The primary risk: any migration failure or data corruption would immediately str
 ## Results & Impact
 
 - **Zero Transaction Interruption**: Shipped the new platform on schedule at 04:00 AM Sunday, with business operations resuming fully normal on Monday morning.
-- **Data Integrity Preserved**: [ADD: 500,000+] past reservation records migrated with 100% financial audit accuracy.
+- **Data Integrity Preserved**: [ADD: 500,000+] past transactional records migrated with 100% financial audit accuracy.
 - **High Stakeholder Confidence**: Acclaimed by client C-level sponsors as the calmest enterprise software transition in the organization's history.
 
 ## Lessons Learned

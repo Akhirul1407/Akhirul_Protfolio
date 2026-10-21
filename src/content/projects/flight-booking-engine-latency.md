@@ -1,9 +1,9 @@
 ---
 number: "01"
 outcomeHeadline: "Reduced flight booking latency by [ADD: 42%] across multi-airline search queries"
-oneLiner: "Re-engineered sprint sequencing and API contract validations for a regional flight aggregator, delivering 2 weeks ahead of schedule."
+oneLiner: "Re-engineered sprint sequencing and API contract validations for a regional API aggregator, delivering 2 weeks ahead of schedule."
 category: "Delivery"
-clientGeneric: "Regional flight aggregator in [region]"
+clientGeneric: "High-throughput API aggregator in [region]"
 role: "Lead Project Manager"
 team: "12 engineers, 2 QA engineers, 1 Product Designer"
 tools:
@@ -25,7 +25,7 @@ featured: true
 
 ## Context & Background
 
-The client—a prominent regional flight aggregator in [region]—was experiencing acute query timeouts during peak seasonal travel searches. With connections to three major Global Distribution Systems (GDS) and bespoke low-cost carrier APIs, discrepancies in response formats caused frequent bottlenecking, resulting in dropped checkout conversions.
+The client—a prominent regional API aggregator in [region]—was experiencing acute query timeouts during peak seasonal traffic. With connections to multiple external upstream suppliers and bespoke service APIs, discrepancies in response formats caused frequent bottlenecking, resulting in dropped conversion rates.
 
 The business had set an aggressive go-live milestone ahead of seasonal holiday traffic. Misaligned team priorities and lack of clear acceptance criteria between backend engineers and third-party API vendors threatened to push delivery back by over two months.
 

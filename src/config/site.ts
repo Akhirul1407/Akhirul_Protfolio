@@ -25,14 +25,14 @@ export const siteConfig: SiteConfig = {
   introLine:
     "I'm Akhirul. At Innovate Solution I keep clients, developers and deadlines pointed in the same direction, so software launches land on time and calm.",
   company: "Innovate Solution",
-  companyIndustry: "travel technology software company",
+  companyIndustry: "software engineering and technology company",
   location: "Bangladesh",
   email: "contact@akhirulislam.com", // [ADD: real email if different]
   linkedin: "https://www.linkedin.com/in/akhirul-islam", // [ADD: real linkedin url]
   formEndpoint: "https://formspree.io/f/placeholder", // Configurable Formspree or Web3Forms endpoint
   siteUrl: "https://akhirulislam.com",
   description:
-    "Portfolio of MD. Akhirul Islam, Project Manager at Innovate Solution. Specializing in travel tech delivery, calm launches, and high-velocity engineering alignment.",
+    "Portfolio of MD. Akhirul Islam, Technical Project Manager with a Computer Science Engineering (CSE) background. Specializing in calm software delivery, API architecture, and high-velocity engineering alignment.",
   navLinks: [
     { label: "Work", href: "/projects" },
     { label: "About", href: "/about" },

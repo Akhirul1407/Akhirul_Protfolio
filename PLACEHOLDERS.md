@@ -75,15 +75,15 @@ When you are ready to update any of these with verified figures or credentials, 
 
 ## 5. About Page: Certifications & Testimonials
 
-### Certifications (`src/pages/about.astro:46-48`)
+### Certifications & Degree (`src/pages/about.astro:46-48`)
+- `B.Sc. in Computer Science & Engineering (CSE)` (Already configured!)
 - `[ADD: Certified ScrumMaster (CSM) or Professional Scrum Master (PSM)]`
-- `[ADD: PMP / Project Management Certification or Degree]`
-- `[ADD: Additional Agile or Travel Technology Certification]`
+- `[ADD: PMP or Technical Cloud Certification, e.g. AWS/Azure]`
 
 ### Testimonials (`src/content/testimonials/`)
 - `engineering-lead.md`:
   - `quote: "[ADD: Real testimonial quote from an engineering lead...]"`
-  - `authorGeneric: "[ADD: Engineering Lead, Travel Tech Platform]"`
+  - `authorGeneric: "[ADD: Engineering Lead / Principal Software Engineer]"`
   - `region: "[ADD: Bangladesh]"`
 - `client-sponsor.md`:
   - `quote: "[ADD: Real testimonial quote from a client sponsor or director...]"`
