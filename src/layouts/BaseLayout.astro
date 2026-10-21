@@ -75,5 +75,36 @@ const pageTitle = title.includes(siteConfig.shortName) ? title : `${title} · ${
 
     <!-- Shared Footer -->
     <Footer />
+
+    <!-- Progressive Scroll Reveal Fallback -->
+    <script>
+      function setupScrollReveal() {
+        if (typeof window === 'undefined') return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (CSS.supports && CSS.supports('animation-timeline', 'view()')) return;
+
+        const targets = document.querySelectorAll('.reveal-on-scroll');
+        if (!targets.length) return;
+
+        targets.forEach((el) => el.classList.add('reveal-fallback'));
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        targets.forEach((el) => observer.observe(el));
+      }
+
+      setupScrollReveal();
+      document.addEventListener('astro:page-load', setupScrollReveal);
+    </script>
   </body>
 </html>
