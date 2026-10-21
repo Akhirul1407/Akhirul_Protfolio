@@ -1,0 +1,69 @@
+---
+const skills = [
+  "Travel Tech Delivery",
+  "Calm Launches",
+  "Cross-Functional Alignment",
+  "Agile & Scrum Execution",
+  "API & Global Distribution",
+  "Stakeholder Communication",
+  "Risk & Scope Mitigation",
+  "Sprint Velocity",
+  "Production Readiness",
+];
+---
+
+<section class="relative w-full border-y border-[#26262F] bg-[#0E0E14] py-5 overflow-hidden" aria-label="Core Capabilities">
+  <div class="marquee-wrapper flex select-none overflow-hidden group">
+    <!-- First track -->
+    <div class="marquee-track flex shrink-0 items-center gap-8 py-1 group-hover:[animation-play-state:paused]">
+      {
+        skills.map((skill) => (
+          <div class="flex items-center gap-8 shrink-0">
+            <span class="font-['Space_Grotesk'] text-lg md:text-2xl font-bold tracking-tight text-[#F4F4F5] uppercase">
+              {skill}
+            </span>
+            <span class="text-[#C6F432] text-sm md:text-base select-none" aria-hidden="true">✦</span>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Duplicate track for seamless infinite loop -->
+    <div class="marquee-track flex shrink-0 items-center gap-8 py-1 group-hover:[animation-play-state:paused]" aria-hidden="true">
+      {
+        skills.map((skill) => (
+          <div class="flex items-center gap-8 shrink-0">
+            <span class="font-['Space_Grotesk'] text-lg md:text-2xl font-bold tracking-tight text-[#F4F4F5] uppercase">
+              {skill}
+            </span>
+            <span class="text-[#C6F432] text-sm md:text-base select-none">✦</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .marquee-track {
+    animation: scrollMarquee 32s linear infinite;
+  }
+
+  @keyframes scrollMarquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none !important;
+    }
+    .marquee-wrapper {
+      overflow-x: auto;
+    }
+  }
+</style>

@@ -1,21 +1,52 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/home/Hero.astro";
+import SkillsMarquee from "../components/home/SkillsMarquee.astro";
+import BentoGrid from "../components/home/BentoGrid.astro";
+import FeaturedProjects from "../components/home/FeaturedProjects.astro";
+import CtaBanner from "../components/home/CtaBanner.astro";
 import { siteConfig } from "../config/site";
+
+// Structured JSON-LD Person Schema
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteConfig.name,
+  jobTitle: siteConfig.title,
+  worksFor: {
+    "@type": "Organization",
+    name: siteConfig.company,
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: siteConfig.location,
+  },
+  url: siteConfig.siteUrl,
+  sameAs: [siteConfig.linkedin],
+  description: siteConfig.description,
+};
 ---
 
-<BaseLayout title={`${siteConfig.name} · ${siteConfig.title}`}>
-  <div class="mx-auto max-w-[1120px] px-6 py-20">
-    <div class="rounded-3xl border border-[#26262F] bg-[#13131A] p-12 text-center">
-      <span class="label-caps mb-4">
-        <span class="pulsing-dot"></span>
-        {siteConfig.title} · {siteConfig.company}
-      </span>
-      <h1 class="hero-h1 mb-6 text-[#F4F4F5]">
-        {siteConfig.headline}
-      </h1>
-      <p class="body-lead mx-auto text-[#A1A1AA]">
-        {siteConfig.introLine}
-      </p>
-    </div>
-  </div>
+<BaseLayout
+  title={`${siteConfig.name} · ${siteConfig.title}`}
+  description={siteConfig.description}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  </Fragment>
+
+  <!-- 1. Hero Section -->
+  <Hero />
+
+  <!-- 2. Scrolling Skills Strip -->
+  <SkillsMarquee />
+
+  <!-- 3. Bento Grid Section -->
+  <BentoGrid />
+
+  <!-- 4. Featured Projects Section -->
+  <FeaturedProjects />
+
+  <!-- 5. Final Call-To-Action Banner -->
+  <CtaBanner />
 </BaseLayout>
