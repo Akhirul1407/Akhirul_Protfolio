@@ -1,0 +1,174 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { siteConfig } from "../../config/site";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+// Next project link for smooth traversal
+const allProjects = (await getCollection("projects")).sort((a, b) =>
+  a.data.number.localeCompare(b.data.number)
+);
+const currentIndex = allProjects.findIndex((p) => p.id === project.id);
+const nextProject = allProjects[(currentIndex + 1) % allProjects.length];
+---
+
+<BaseLayout
+  title={`${project.data.outcomeHeadline} · ${siteConfig.name}`}
+  description={project.data.oneLiner}
+>
+  <article class="mx-auto max-w-[1120px] px-6 py-14 md:py-20">
+    <!-- Back Navigation -->
+    <div class="mb-10">
+      <a
+        href="/projects"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-[#A1A1AA] transition-colors hover:text-[#C6F432]"
+      >
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>All projects</span>
+      </a>
+    </div>
+
+    <!-- Case Study Top Label -->
+    <div class="flex flex-wrap items-center gap-3 mb-6">
+      <span class="font-['Space_Grotesk'] text-xs font-bold uppercase tracking-wider text-[#C6F432]">
+        CASE STUDY {project.data.number}
+      </span>
+      <span class="text-[#3A3A46]">·</span>
+      <span class="rounded-full border border-[#26262F] bg-[#1C1C26] px-3.5 py-1 text-xs font-semibold text-[#F4F4F5]">
+        CLIENT: CONFIDENTIAL
+      </span>
+      <span class="text-[#3A3A46]">·</span>
+      <span class="text-xs text-[#A1A1AA]">
+        {project.data.clientGeneric}
+      </span>
+    </div>
+
+    <!-- Big Outcome Headline -->
+    <h1 class="page-h1 text-[#F4F4F5] max-w-4xl mb-8">
+      {project.data.outcomeHeadline}
+    </h1>
+
+    <p class="body-lead text-lg text-[#A1A1AA] max-w-3xl mb-14">
+      {project.data.oneLiner}
+    </p>
+
+    <!-- 4 Info Cards: Role, Team, Tools, Timeline -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 md:mb-20">
+      <!-- Info Card 1: My Role -->
+      <div class="rounded-2xl border border-[#26262F] bg-[#13131A] p-5">
+        <span class="text-xs uppercase tracking-wider text-[#A1A1AA] font-semibold">
+          My Role
+        </span>
+        <div class="mt-2 text-sm font-bold text-[#F4F4F5]">
+          {project.data.role}
+        </div>
+      </div>
+
+      <!-- Info Card 2: Team -->
+      <div class="rounded-2xl border border-[#26262F] bg-[#13131A] p-5">
+        <span class="text-xs uppercase tracking-wider text-[#A1A1AA] font-semibold">
+          Team Size
+        </span>
+        <div class="mt-2 text-sm font-bold text-[#F4F4F5]">
+          {project.data.team}
+        </div>
+      </div>
+
+      <!-- Info Card 3: Tools -->
+      <div class="rounded-2xl border border-[#26262F] bg-[#13131A] p-5">
+        <span class="text-xs uppercase tracking-wider text-[#A1A1AA] font-semibold">
+          Tools & Workflows
+        </span>
+        <div class="mt-2 flex flex-wrap gap-1.5">
+          {project.data.tools.map((t) => (
+            <span class="rounded-md bg-[#1C1C26] px-2 py-0.5 text-xs text-[#C6F432] border border-[#26262F]">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Info Card 4: Timeline -->
+      <div class="rounded-2xl border border-[#26262F] bg-[#13131A] p-5">
+        <span class="text-xs uppercase tracking-wider text-[#A1A1AA] font-semibold">
+          Timeline
+        </span>
+        <div class="mt-2 text-sm font-bold text-[#F4F4F5]">
+          {project.data.timeline}
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Highlights (Big Lime Numbers in Cards) -->
+    <div class="mb-16 md:mb-20">
+      <span class="label-caps mb-4">
+        <span class="pulsing-dot" aria-hidden="true"></span>
+        Quantifiable Outcomes
+      </span>
+      <h2 class="section-h2 text-[#F4F4F5] mb-8">
+        Delivery results
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {
+          project.data.results.map((res) => (
+            <div class="hover-card flex flex-col justify-between rounded-[26px] border border-[#26262F] bg-[#13131A] p-7">
+              <span class="font-['Space_Grotesk'] text-4xl sm:text-5xl font-extrabold text-[#C6F432]">
+                {res.metric}
+              </span>
+              <p class="mt-4 text-sm font-medium text-[#A1A1AA] leading-relaxed">
+                {res.label}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Markdown Body (Context, What I Did, Lessons) -->
+    <div class="prose prose-invert max-w-3xl prose-headings:font-['Space_Grotesk'] prose-headings:text-[#F4F4F5] prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-p:text-[#A1A1AA] prose-p:leading-relaxed prose-li:text-[#A1A1AA] prose-strong:text-[#F4F4F5] border-t border-[#26262F] pt-12">
+      <Content />
+    </div>
+
+    <!-- Next Case Study Footer -->
+    {
+      nextProject && (
+        <div class="mt-20 border-t border-[#26262F] pt-12">
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#A1A1AA]">
+            Next Case Study
+          </span>
+          <a
+            href={`/projects/${nextProject.id}`}
+            class="group mt-4 flex flex-col md:flex-row md:items-center justify-between gap-4 rounded-2xl border border-[#26262F] bg-[#13131A] p-8 transition-all hover:border-[#C6F432] hover:shadow-[0_0_24px_rgba(198,244,50,0.15)]"
+          >
+            <div>
+              <span class="font-['Space_Grotesk'] text-xs font-bold text-[#C6F432] uppercase">
+                CASE STUDY {nextProject.data.number}
+              </span>
+              <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-[#F4F4F5] mt-1 group-hover:text-[#C6F432] transition-colors">
+                {nextProject.data.outcomeHeadline}
+              </h3>
+            </div>
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#C6F432] text-[#0A0A0F] shrink-0 transition-transform group-hover:translate-x-1">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      )
+    }
+  </article>
+</BaseLayout>

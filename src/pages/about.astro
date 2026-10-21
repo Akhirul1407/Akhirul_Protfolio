@@ -1,0 +1,310 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../config/site";
+
+const experienceList = (await getCollection("experience")).sort(
+  (a, b) => a.data.order - b.data.order
+);
+const testimonials = await getCollection("testimonials");
+
+const principles = [
+  {
+    number: "01",
+    title: "Over-communicate early to prevent midnight fire-drills",
+    description:
+      "Surprises belong in birthday parties, not software releases. I surface risks, dependency blockers, and schedule slips the instant they appear—when they are still cheap and simple to resolve.",
+  },
+  {
+    number: "02",
+    title: "Protect developer flow by filtering ambiguous scope",
+    description:
+      "Engineers write the best software when requirements are concrete and uninterrupted. I act as a shock absorber between shifting stakeholder demands and the sprint backlog.",
+  },
+  {
+    number: "03",
+    title: "Align every ticket to commercial delivery",
+    description:
+      "Velocity without purpose is just wasted effort. Every user story, technical refactor, and QA gate must clearly support the client's business goal and product launch timeline.",
+  },
+];
+
+const skills = [
+  "Agile & Scrum Delivery",
+  "API Contract Alignment",
+  "Travel Tech Ecosystems",
+  "Release Governance",
+  "Stakeholder Communication",
+  "Sprint Velocity Optimization",
+  "Cross-Functional Squad Leadership",
+  "Risk & Dependency Management",
+  "UAT & Production Readiness",
+  "Incident Post-Mortems",
+];
+
+const certifications = [
+  "[ADD: Certified ScrumMaster (CSM) or Professional Scrum Master (PSM)]",
+  "[ADD: PMP / Project Management Certification or Degree]",
+  "[ADD: Additional Agile or Travel Technology Certification]",
+];
+---
+
+<BaseLayout
+  title={`About · ${siteConfig.name}`}
+  description={`Learn about ${siteConfig.name}, Project Manager at Innovate Solution. Discover my principles, experience, and approach to software delivery.`}
+>
+  <div class="mx-auto max-w-[1120px] px-6 py-16 md:py-24">
+    <!-- Header / Headline -->
+    <div class="max-w-3xl mb-16 md:mb-24">
+      <span class="label-caps mb-4">
+        <span class="pulsing-dot" aria-hidden="true"></span>
+        The Person Behind The Plan
+      </span>
+      <h1 class="page-h1 text-[#F4F4F5]">
+        The person behind the plan.
+      </h1>
+      <p class="body-lead mt-6 text-[#A1A1AA]">
+        I'm Akhirul. At Innovate Solution I keep clients, developers and deadlines pointed in the same direction, so software launches land on time and calm.
+      </p>
+    </div>
+
+    <!-- Portrait & Story Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-24 md:mb-32">
+      <!-- Portrait Graphic Card (5 cols) -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative overflow-hidden rounded-[28px] border border-[#26262F] bg-[#13131A] p-8 text-center shadow-xl">
+          <!-- Background Glow -->
+          <div class="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-[#C6F432]/10 blur-3xl" aria-hidden="true"></div>
+
+          <!-- Stylized Portrait Badge -->
+          <div class="mx-auto flex h-44 w-44 items-center justify-center rounded-3xl bg-gradient-to-tr from-[#1C1C26] via-[#26262F] to-[#13131A] border-2 border-[#3A3A46] text-[#C6F432] shadow-2xl">
+            <div class="flex flex-col items-center">
+              <span class="font-['Space_Grotesk'] text-5xl font-extrabold tracking-tight">AI</span>
+              <span class="mt-1 text-xs uppercase tracking-widest text-[#A1A1AA] font-semibold">MD. Akhirul Islam</span>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="font-['Space_Grotesk'] text-xl font-bold text-[#F4F4F5]">
+              {siteConfig.name}
+            </h2>
+            <p class="text-sm font-medium text-[#C6F432] mt-1">
+              {siteConfig.title}
+            </p>
+            <p class="text-xs text-[#A1A1AA] mt-0.5">
+              {siteConfig.company} · {siteConfig.location}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-[#26262F] flex flex-wrap justify-center gap-2">
+            <span class="rounded-full bg-[#1C1C26] px-3 py-1 text-xs text-[#F4F4F5] border border-[#26262F]">
+              Travel Software
+            </span>
+            <span class="rounded-full bg-[#1C1C26] px-3 py-1 text-xs text-[#F4F4F5] border border-[#26262F]">
+              Calm Delivery
+            </span>
+            <span class="rounded-full bg-[#1C1C26] px-3 py-1 text-xs text-[#F4F4F5] border border-[#26262F]">
+              Agile PM
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narrative Story (7 cols) -->
+      <div class="lg:col-span-7 flex flex-col gap-6 text-[#A1A1AA] text-base leading-relaxed">
+        <h2 class="font-['Space_Grotesk'] text-2xl md:text-3xl font-bold text-[#F4F4F5]">
+          Software delivery doesn't have to be chaotic.
+        </h2>
+
+        <p>
+          Throughout my career in software project management, I've seen that the most expensive failures rarely stem from technical inadequacy. They happen when stakeholders expect one thing, designers wireframe another, and developers build what made sense on day three.
+        </p>
+
+        <p>
+          At <strong class="text-[#F4F4F5]">Innovate Solution</strong>, I lead project delivery for travel technology products where reliability is non-negotiable. Travel technology is uniquely unforgiving: thousands of concurrent queries hit flight inventories, hotel webhooks fluctuate by the second, and third-party global distribution systems operate on strict legacy protocols.
+        </p>
+
+        <p>
+          My role is to create certainty. I translate complex client objectives into unambiguous, bite-sized sprints. I protect our engineering squad from scope churn, negotiate realistic trade-offs with client leadership, and build deployment runbooks that ensure go-live weekends are calm, quiet, and celebratory.
+        </p>
+
+        <div class="mt-4 flex items-center gap-4">
+          <a
+            href="/contact"
+            class="hover-btn inline-flex items-center gap-2 rounded-full bg-[#C6F432] px-6 py-3 text-sm font-bold text-[#0A0A0F]"
+          >
+            <span>Let's talk about your project</span>
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- "How I Work" - 3 Numbered Principle Cards -->
+    <div class="mb-24 md:mb-32">
+      <div class="mb-12">
+        <span class="label-caps mb-3">
+          <span class="pulsing-dot" aria-hidden="true"></span>
+          Delivery Philosophy
+        </span>
+        <h2 class="section-h2 text-[#F4F4F5]">
+          How I work
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {
+          principles.map((principle) => (
+            <div class="hover-card flex flex-col justify-between rounded-[26px] border border-[#26262F] bg-[#13131A] p-8">
+              <div>
+                <span class="font-['Space_Grotesk'] text-3xl font-bold text-[#C6F432]">
+                  {principle.number}
+                </span>
+                <h3 class="font-['Space_Grotesk'] text-xl font-bold text-[#F4F4F5] mt-4 mb-3">
+                  {principle.title}
+                </h3>
+              </div>
+              <p class="text-sm leading-relaxed text-[#A1A1AA] mt-2">
+                {principle.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Experience Section (Date Left, Role & Bullets Right) -->
+    <div class="mb-24 md:mb-32">
+      <div class="mb-12">
+        <span class="label-caps mb-3">
+          <span class="pulsing-dot" aria-hidden="true"></span>
+          Career History
+        </span>
+        <h2 class="section-h2 text-[#F4F4F5]">
+          Experience
+        </h2>
+      </div>
+
+      <div class="flex flex-col divide-y divide-[#26262F] border-y border-[#26262F]">
+        {
+          experienceList.map((exp) => (
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 py-10 transition-colors hover:bg-[#13131A]/30 px-2 rounded-xl">
+              <!-- Left: Date & Period (4 cols) -->
+              <div class="md:col-span-4 flex flex-col items-start">
+                <span class="font-['Space_Grotesk'] text-lg font-bold text-[#C6F432]">
+                  {exp.data.period}
+                </span>
+                <span class="text-xs text-[#A1A1AA] mt-1">
+                  {exp.data.location}
+                </span>
+              </div>
+
+              <!-- Right: Role, Company & Bullets (8 cols) -->
+              <div class="md:col-span-8 flex flex-col">
+                <h3 class="font-['Space_Grotesk'] text-xl font-bold text-[#F4F4F5]">
+                  {exp.data.role}
+                </h3>
+                <span class="text-sm font-semibold text-[#A1A1AA] mt-0.5 mb-4">
+                  {exp.data.company}
+                </span>
+
+                <ul class="flex flex-col gap-2.5 text-sm leading-relaxed text-[#A1A1AA]">
+                  {exp.data.bullets.map((bullet) => (
+                    <li class="flex items-start gap-3">
+                      <span class="text-[#C6F432] mt-1 shrink-0">✦</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Skills and Certifications Chips -->
+    <div class="mb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Skills (7 cols) -->
+        <div class="lg:col-span-7 rounded-[28px] border border-[#26262F] bg-[#13131A] p-8">
+          <span class="label-caps mb-3">Core Competencies</span>
+          <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-[#F4F4F5] mb-6">
+            Delivery & PM Skills
+          </h3>
+          <div class="flex flex-wrap gap-2.5">
+            {
+              skills.map((skill) => (
+                <span class="inline-flex items-center rounded-xl border border-[#26262F] bg-[#1C1C26] px-4 py-2 text-xs font-semibold text-[#F4F4F5] transition-colors hover:border-[#C6F432] hover:text-[#C6F432]">
+                  {skill}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Certifications (5 cols) -->
+        <div class="lg:col-span-5 rounded-[28px] border border-[#26262F] bg-[#13131A] p-8 flex flex-col justify-between">
+          <div>
+            <span class="label-caps mb-3">Qualifications</span>
+            <h3 class="font-['Space_Grotesk'] text-2xl font-bold text-[#F4F4F5] mb-6">
+              Certifications
+            </h3>
+            <div class="flex flex-col gap-3">
+              {
+                certifications.map((cert) => (
+                  <div class="flex items-center gap-3 rounded-xl border border-[#26262F] bg-[#1C1C26]/70 p-3.5 text-xs text-[#F4F4F5]">
+                    <svg class="h-4 w-4 shrink-0 text-[#C6F432]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                    <span>{cert}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <p class="text-[11px] text-[#A1A1AA] mt-4">
+            * Recorded in PLACEHOLDERS.md for real credential verification.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    {
+      testimonials.length > 0 && (
+        <div class="mb-12">
+          <div class="mb-12">
+            <span class="label-caps mb-3">
+              <span class="pulsing-dot" aria-hidden="true"></span>
+              Colleague & Client Endorsements
+            </span>
+            <h2 class="section-h2 text-[#F4F4F5]">
+              What peers say
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((t) => (
+              <div class="hover-card flex flex-col justify-between rounded-[28px] border border-[#26262F] bg-[#13131A] p-8">
+                <blockquote class="text-base italic leading-relaxed text-[#F4F4F5]/90 mb-6">
+                  "{t.data.quote}"
+                </blockquote>
+                <div class="pt-4 border-t border-[#26262F] flex items-center justify-between">
+                  <span class="text-xs font-semibold text-[#C6F432]">
+                    {t.data.authorGeneric}
+                  </span>
+                  <span class="text-xs text-[#A1A1AA]">
+                    {t.data.region}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>

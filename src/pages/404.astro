@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../config/site";
+---
+
+<BaseLayout
+  title={`404 - Page Not Found · ${siteConfig.name}`}
+  description="The requested page could not be found."
+>
+  <div class="mx-auto flex min-h-[60vh] max-w-[1120px] flex-col items-center justify-center px-6 py-24 text-center">
+    <div class="inline-flex items-center gap-2 rounded-full border border-[#C6F432]/30 bg-[#C6F432]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#C6F432] mb-6">
+      <span class="pulsing-dot" aria-hidden="true"></span>
+      HTTP 404
+    </div>
+
+    <h1 class="hero-h1 font-['Space_Grotesk'] text-[#F4F4F5] mb-6">
+      Destination not on the roadmap.
+    </h1>
+
+    <p class="body-lead max-w-lg text-[#A1A1AA] mb-10">
+      The route you requested doesn't exist, was archived, or was never scheduled for this sprint. Let's get you back on track.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a
+        href="/"
+        class="hover-btn inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#C6F432] px-7 py-3 text-sm font-bold text-[#0A0A0F]"
+      >
+        Return to Home
+      </a>
+      <a
+        href="/projects"
+        class="hover-btn inline-flex min-h-[48px] items-center justify-center rounded-full border border-[#26262F] bg-[#13131A] px-7 py-3 text-sm font-semibold text-[#F4F4F5] hover:border-[#C6F432]"
+      >
+        View Case Studies
+      </a>
+    </div>
+  </div>
+</BaseLayout>
