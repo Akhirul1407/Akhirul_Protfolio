@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akhirulislam.com/sitemap-index.xml
+Sitemap: https://akhirulislam.pages.dev/sitemap-index.xml

@@ -30,7 +30,7 @@ export const siteConfig: SiteConfig = {
   email: "contact@akhirulislam.com", // [ADD: real email if different]
   linkedin: "https://www.linkedin.com/in/akhirul-islam", // [ADD: real linkedin url]
   formEndpoint: "https://formspree.io/f/placeholder", // Configurable Formspree or Web3Forms endpoint
-  siteUrl: "https://akhirulislam.com",
+  siteUrl: "https://akhirulislam.pages.dev",
   description:
     "Portfolio of MD. Akhirul Islam, Technical Project Manager with a Computer Science Engineering (CSE) background. Specializing in calm software delivery, API architecture, and high-velocity engineering alignment.",
   navLinks: [
