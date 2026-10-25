@@ -21,6 +21,7 @@ const projects = defineCollection({
       })
     ),
     featured: z.boolean().default(false),
+    liveUrl: z.string().optional(),
   }),
 });
 

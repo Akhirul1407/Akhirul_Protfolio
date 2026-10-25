@@ -2,6 +2,8 @@ export interface SiteConfig {
   name: string;
   shortName: string;
   initials: string;
+  logo: string;
+  avatar: string;
   title: string;
   headline: string;
   introLine: string;
@@ -20,6 +22,8 @@ export const siteConfig: SiteConfig = {
   name: "MD. Akhirul Islam",
   shortName: "Akhirul Islam",
   initials: "AI",
+  logo: "/logo.jpg",
+  avatar: "/profile.jpg",
   title: "Project Manager",
   headline: "I don't just manage projects. I ship them.",
   introLine:
@@ -34,6 +38,7 @@ export const siteConfig: SiteConfig = {
   description:
     "Portfolio of MD. Akhirul Islam, Technical Project Manager with a Computer Science Engineering (CSE) background. Specializing in calm software delivery, API architecture, and high-velocity engineering alignment.",
   navLinks: [
+    { label: "Home", href: "/" },
     { label: "Work", href: "/projects" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },

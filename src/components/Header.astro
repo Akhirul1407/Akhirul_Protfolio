@@ -25,8 +25,14 @@ const isActive = (href: string) => {
       class="group flex items-center gap-3 focus-visible:outline-lime-400"
       aria-label={`${siteConfig.name} - Home`}
     >
-      <div class="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#C6F432] to-[#B0E61A] text-[#0A0A0F] shadow-[0_0_14px_rgba(198,244,50,0.35)] ring-1 ring-[#C6F432]/40 transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_22px_rgba(198,244,50,0.6)]">
-        <span class="font-['Space_Grotesk'] text-base font-extrabold tracking-tight">{siteConfig.initials}</span>
+      <div class="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-cyan-500/30 bg-[#0c121e] shadow-[0_0_15px_rgba(6,182,212,0.25)] ring-1 ring-cyan-500/20 transition-all duration-300 group-hover:scale-105 group-hover:border-cyan-400 group-hover:shadow-[0_0_22px_rgba(6,182,212,0.5)]">
+        <img
+          src={siteConfig.logo}
+          alt={siteConfig.name}
+          width="40"
+          height="40"
+          class="h-full w-full object-cover"
+        />
       </div>
       <div class="flex flex-col">
         <div class="flex items-center gap-2">
