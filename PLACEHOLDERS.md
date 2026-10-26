@@ -65,11 +65,11 @@ When you are ready to update any of these with verified figures or credentials, 
 - `[ADD: 98%]` On-time milestone delivery rate.
 - `[ADD: 40%]` Reduction in post-deployment hotfixes.
 
-### Prior Role: `src/content/experience/associate-pm.md`
-- `period: "[ADD: 2021 — 2023]"` — Enter your exact employment dates.
-- `role: "[ADD: Associate Project Manager / Software Coordinator]"` — Enter your exact title.
-- `company: "[ADD: Software Firm / Technology Company]"` — Enter your prior company name.
-- `[ADD: 8+]` Software developers coordinated.
+### Prior Role: `src/content/experience/associate-pm.md` (Updated ✅)
+- `period: "March 2025 — December 2025"`
+- `role: "Project Coordinator"`
+- `company: "Innovate Solution"`
+- Coordinated cross-functional software development squads.
 
 ---
 

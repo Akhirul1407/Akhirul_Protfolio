@@ -10,7 +10,7 @@
   --color-border-strong: #3A3A46;
   --color-text-main: #F4F4F5;
   --color-text-muted: #A1A1AA;
-  --color-accent: #C6F432;
+  --color-accent: #38BDF8;
   --color-accent-text: #0A0A0F;
   --color-accent-violet: #8B7CF6;
 
@@ -30,7 +30,7 @@
   --border-strong-color: #3A3A46;
   --text-color: #F4F4F5;
   --text-muted-color: #A1A1AA;
-  --accent-color: #C6F432;
+  --accent-color: #38BDF8;
   --accent-text-color: #0A0A0F;
   --accent-violet-color: #8B7CF6;
 }
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #C6F432;
+  color: #38BDF8;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   position: absolute;
   top: -100px;
   left: 1rem;
-  background-color: #C6F432;
+  background-color: #38BDF8;
   color: #0A0A0F;
   padding: 0.75rem 1.25rem;
   font-weight: 700;
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 :focus-visible {
-  outline: 2px solid #C6F432;
+  outline: 2px solid #38BDF8;
   outline-offset: 3px;
 }
 
@@ -140,8 +140,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .hover-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(198, 244, 50, 0.45);
-  box-shadow: 0 16px 36px -12px rgba(198, 244, 50, 0.12);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 16px 36px -12px rgba(56, 189, 248, 0.15);
 }
 
 /* Button micro-interaction */
@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .hover-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -6px rgba(198, 244, 50, 0.35);
+  box-shadow: 0 8px 24px -6px rgba(56, 189, 248, 0.35);
 }
 
 /* Pulsing Status Dot */
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #C6F432;
+  background-color: #38BDF8;
 }
 
 .pulsing-dot::after {
@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #C6F432;
+  background-color: #38BDF8;
   opacity: 0.6;
   animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }

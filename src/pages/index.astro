@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/home/Hero.astro";
+import WhoAmI from "../components/home/WhoAmI.astro";
 import SkillsMarquee from "../components/home/SkillsMarquee.astro";
 import BentoGrid from "../components/home/BentoGrid.astro";
 import FeaturedProjects from "../components/home/FeaturedProjects.astro";
@@ -38,10 +39,13 @@ const personSchema = {
   <!-- 1. Hero Section -->
   <Hero />
 
-  <!-- 2. Scrolling Skills Strip -->
+  <!-- 2. Highly Highlighted "WHO AM I" Field -->
+  <WhoAmI />
+
+  <!-- 3. Scrolling Skills Strip -->
   <SkillsMarquee />
 
-  <!-- 3. Bento Grid Section -->
+  <!-- 4. Bento Grid Section -->
   <BentoGrid />
 
   <!-- 4. Featured Projects Section -->

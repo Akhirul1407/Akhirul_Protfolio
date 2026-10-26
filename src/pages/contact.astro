@@ -27,16 +27,16 @@ import { siteConfig } from "../config/site";
           <!-- Email Card -->
           <a
             href={`mailto:${siteConfig.email}`}
-            class="group flex items-center gap-4 rounded-2xl border border-[#26262F] bg-[#13131A] p-4 transition-all hover:border-[#C6F432] hover:shadow-[0_0_20px_rgba(198,244,50,0.15)]"
+            class="group flex items-center gap-4 rounded-2xl border border-[#26262F] bg-[#13131A] p-4 transition-all hover:border-[#38BDF8] hover:shadow-[0_0_20px_rgba(56,189,248,0.2)]"
           >
-            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1C1C26] text-[#C6F432] group-hover:bg-[#C6F432] group-hover:text-[#0A0A0F] transition-colors">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1C1C26] text-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-[#0A0A0F] transition-colors">
               <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
             <div class="flex flex-col">
               <span class="text-xs text-[#A1A1AA] uppercase tracking-wider font-semibold">Direct Email</span>
-              <span class="text-sm font-bold text-[#F4F4F5] group-hover:text-[#C6F432] transition-colors">
+              <span class="text-sm font-bold text-[#F4F4F5] group-hover:text-[#38BDF8] transition-colors">
                 {siteConfig.email}
               </span>
             </div>
@@ -47,16 +47,16 @@ import { siteConfig } from "../config/site";
             href={siteConfig.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            class="group flex items-center gap-4 rounded-2xl border border-[#26262F] bg-[#13131A] p-4 transition-all hover:border-[#C6F432] hover:shadow-[0_0_20px_rgba(198,244,50,0.15)]"
+            class="group flex items-center gap-4 rounded-2xl border border-[#26262F] bg-[#13131A] p-4 transition-all hover:border-[#38BDF8] hover:shadow-[0_0_20px_rgba(56,189,248,0.2)]"
           >
-            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1C1C26] text-[#C6F432] group-hover:bg-[#C6F432] group-hover:text-[#0A0A0F] transition-colors">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1C1C26] text-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-[#0A0A0F] transition-colors">
               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
             </div>
             <div class="flex flex-col">
               <span class="text-xs text-[#A1A1AA] uppercase tracking-wider font-semibold">Professional Profile</span>
-              <span class="text-sm font-bold text-[#F4F4F5] group-hover:text-[#C6F432] transition-colors">
+              <span class="text-sm font-bold text-[#F4F4F5] group-hover:text-[#38BDF8] transition-colors">
                 Connect on LinkedIn
               </span>
             </div>
@@ -64,7 +64,7 @@ import { siteConfig } from "../config/site";
 
           <!-- Location Info -->
           <div class="flex items-center gap-3 px-2 text-xs text-[#A1A1AA]">
-            <svg class="h-4 w-4 text-[#C6F432]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg class="h-4 w-4 text-[#38BDF8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
@@ -98,7 +98,7 @@ import { siteConfig } from "../config/site";
             <!-- Name Field -->
             <div class="flex flex-col gap-2">
               <label for="contact-name" class="text-xs font-semibold uppercase tracking-wider text-[#F4F4F5]">
-                Your Name <span class="text-[#C6F432]">*</span>
+                Your Name <span class="text-[#38BDF8]">*</span>
               </label>
               <input
                 type="text"
@@ -106,14 +106,14 @@ import { siteConfig } from "../config/site";
                 name="name"
                 required
                 placeholder="Jane Doe"
-                class="w-full rounded-xl border border-[#26262F] bg-[#1C1C26] px-4 py-3.5 text-sm text-[#F4F4F5] placeholder-[#A1A1AA]/50 transition-colors focus:border-[#C6F432] focus:outline-none"
+                class="w-full rounded-xl border border-[#26262F] bg-[#1C1C26] px-4 py-3.5 text-sm text-[#F4F4F5] placeholder-[#A1A1AA]/50 transition-colors focus:border-[#38BDF8] focus:outline-none"
               />
             </div>
 
             <!-- Email Field -->
             <div class="flex flex-col gap-2">
               <label for="contact-email" class="text-xs font-semibold uppercase tracking-wider text-[#F4F4F5]">
-                Email Address <span class="text-[#C6F432]">*</span>
+                Email Address <span class="text-[#38BDF8]">*</span>
               </label>
               <input
                 type="email"
@@ -121,14 +121,14 @@ import { siteConfig } from "../config/site";
                 name="email"
                 required
                 placeholder="jane@company.com"
-                class="w-full rounded-xl border border-[#26262F] bg-[#1C1C26] px-4 py-3.5 text-sm text-[#F4F4F5] placeholder-[#A1A1AA]/50 transition-colors focus:border-[#C6F432] focus:outline-none"
+                class="w-full rounded-xl border border-[#26262F] bg-[#1C1C26] px-4 py-3.5 text-sm text-[#F4F4F5] placeholder-[#A1A1AA]/50 transition-colors focus:border-[#38BDF8] focus:outline-none"
               />
             </div>
 
             <!-- Message Field -->
             <div class="flex flex-col gap-2">
               <label for="contact-message" class="text-xs font-semibold uppercase tracking-wider text-[#F4F4F5]">
-                Project or Inquiry Details <span class="text-[#C6F432]">*</span>
+                Project or Inquiry Details <span class="text-[#38BDF8]">*</span>
               </label>
               <textarea
                 id="contact-message"
@@ -136,7 +136,7 @@ import { siteConfig } from "../config/site";
                 required
                 rows="5"
                 placeholder="Tell me about your product, roadmap goals, or team requirements..."
-                class="w-full rounded-xl border border-[#26262F] bg-[#1C1C26] px-4 py-3.5 text-sm text-[#F4F4F5] placeholder-[#A1A1AA]/50 transition-colors focus:border-[#C6F432] focus:outline-none resize-y"
+                class="w-full rounded-xl border border-[#26262F] bg-[#1C1C26] px-4 py-3.5 text-sm text-[#F4F4F5] placeholder-[#A1A1AA]/50 transition-colors focus:border-[#38BDF8] focus:outline-none resize-y"
               ></textarea>
             </div>
 
@@ -144,7 +144,7 @@ import { siteConfig } from "../config/site";
             <button
               id="submit-btn"
               type="submit"
-              class="hover-btn group mt-2 flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full bg-[#C6F432] px-8 py-3.5 text-sm font-bold text-[#0A0A0F] shadow-[0_0_24px_rgba(198,244,50,0.25)] transition-all cursor-pointer"
+              class="hover-btn group mt-2 flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full bg-[#38BDF8] px-8 py-3.5 text-sm font-bold text-[#0A0A0F] shadow-[0_0_24px_rgba(56,189,248,0.25)] transition-all cursor-pointer"
             >
               <span id="btn-text">Send Message</span>
               <svg
@@ -200,7 +200,7 @@ import { siteConfig } from "../config/site";
         setTimeout(() => {
           submitBtn.disabled = false;
           btnText.textContent = 'Send Message';
-          formStatus.className = 'block rounded-xl border border-[#C6F432]/40 bg-[#C6F432]/10 p-4 text-xs font-semibold text-[#C6F432]';
+          formStatus.className = 'block rounded-xl border border-[#38BDF8]/40 bg-[#38BDF8]/10 p-4 text-xs font-semibold text-[#38BDF8]';
           formStatus.textContent = 'Thank you! Your message has been prepared. (Configure real Formspree endpoint in src/config/site.ts).';
           form.reset();
         }, 600);
@@ -223,7 +223,7 @@ import { siteConfig } from "../config/site";
         });
 
         if (response.ok) {
-          formStatus.className = 'block rounded-xl border border-[#C6F432]/40 bg-[#C6F432]/10 p-4 text-xs font-semibold text-[#C6F432]';
+          formStatus.className = 'block rounded-xl border border-[#38BDF8]/40 bg-[#38BDF8]/10 p-4 text-xs font-semibold text-[#38BDF8]';
           formStatus.textContent = 'Thank you! Your message has been sent successfully. I will get back to you shortly.';
           form.reset();
         } else {

@@ -29,8 +29,8 @@ All global color tokens and typography definitions are centralized in `src/style
 --color-border-strong: #3A3A46;   /* Prominent interactive border */
 --color-text-main: #F4F4F5;       /* Primary text */
 --color-text-muted: #A1A1AA;      /* Secondary/supporting copy */
---color-accent: #C6F432;          /* Electric Lime accent */
---color-accent-text: #0A0A0F;     /* High-contrast text on lime backgrounds */
+--color-accent: #38BDF8;          /* Electric Sky Cyan accent */
+--color-accent-text: #0A0A0F;     /* High-contrast text on cyan backgrounds */
 --color-accent-violet: #8B7CF6;   /* Secondary accent in decorative illustrations */
 ```
 

@@ -41,7 +41,7 @@ const categories = ["All", "Delivery", "Client onboarding", "Team leadership"] a
             class:list={[
               "project-filter-btn rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all duration-200 cursor-pointer",
               index === 0
-                ? "active bg-[#C6F432] text-[#0A0A0F] shadow-[0_0_16px_rgba(198,244,50,0.3)]"
+                ? "active bg-[#38BDF8] text-[#0A0A0F] shadow-[0_0_16px_rgba(56,189,248,0.3)]"
                 : "border border-[#26262F] bg-[#13131A] text-[#A1A1AA] hover:border-[#3A3A46] hover:text-[#F4F4F5]"
             ]}
           >
@@ -67,14 +67,14 @@ const categories = ["All", "Delivery", "Client onboarding", "Team leadership"] a
               <!-- Left: Number & Details -->
               <div class="flex items-start gap-6 md:gap-8 max-w-3xl">
                 <!-- Large Space Grotesk Number -->
-                <span class="font-['Space_Grotesk'] text-2xl md:text-3xl font-bold text-[#C6F432] shrink-0 mt-0.5">
+                <span class="font-['Space_Grotesk'] text-2xl md:text-3xl font-bold text-[#38BDF8] shrink-0 mt-0.5">
                   {project.data.number}
                 </span>
 
                 <div class="flex flex-col items-start">
                   <!-- Category & Confidential Tags -->
                   <div class="flex flex-wrap items-center gap-2.5 mb-2.5 text-xs">
-                    <span class="rounded-full border border-[#26262F] bg-[#1C1C26] px-2.5 py-0.5 font-medium text-[#C6F432]">
+                    <span class="rounded-full border border-[#26262F] bg-[#1C1C26] px-2.5 py-0.5 font-medium text-[#38BDF8]">
                       {project.data.category}
                     </span>
                     <span class="text-[#3A3A46]">·</span>
@@ -84,7 +84,7 @@ const categories = ["All", "Delivery", "Client onboarding", "Team leadership"] a
                   </div>
 
                   <!-- Outcome Headline -->
-                  <h2 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-bold text-[#F4F4F5] transition-colors group-hover:text-[#C6F432]">
+                  <h2 class="font-['Space_Grotesk'] text-xl sm:text-2xl font-bold text-[#F4F4F5] transition-colors group-hover:text-[#38BDF8]">
                     {project.data.outcomeHeadline}
                   </h2>
 
@@ -97,10 +97,10 @@ const categories = ["All", "Delivery", "Client onboarding", "Team leadership"] a
 
               <!-- Right: Arrow (moves diagonally on hover) -->
               <div class="flex items-center gap-4 self-end md:self-center shrink-0">
-                <span class="hidden lg:inline-block text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider group-hover:text-[#C6F432]">
+                <span class="hidden lg:inline-block text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider group-hover:text-[#38BDF8]">
                   Case study
                 </span>
-                <div class="flex h-12 w-12 items-center justify-center rounded-full border border-[#26262F] bg-[#13131A] text-[#F4F4F5] transition-all duration-200 group-hover:border-[#C6F432] group-hover:bg-[#C6F432] group-hover:text-[#0A0A0F] group-hover:shadow-[0_0_18px_rgba(198,244,50,0.3)]">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full border border-[#26262F] bg-[#13131A] text-[#F4F4F5] transition-all duration-200 group-hover:border-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-[#0A0A0F] group-hover:shadow-[0_0_18px_rgba(56,189,248,0.3)]">
                   <svg
                     class="h-5 w-5 transition-transform duration-200 group-hover:-translate-y-1 group-hover:translate-x-1"
                     fill="none"
@@ -144,9 +144,9 @@ const categories = ["All", "Delivery", "Client onboarding", "Team leadership"] a
           b.setAttribute('aria-selected', String(isSelected));
           if (isSelected) {
             b.classList.remove('border', 'border-[#26262F]', 'bg-[#13131A]', 'text-[#A1A1AA]');
-            b.classList.add('bg-[#C6F432]', 'text-[#0A0A0F]', 'shadow-[0_0_16px_rgba(198,244,50,0.3)]');
+            b.classList.add('bg-[#38BDF8]', 'text-[#0A0A0F]', 'shadow-[0_0_16px_rgba(56,189,248,0.3)]');
           } else {
-            b.classList.remove('bg-[#C6F432]', 'text-[#0A0A0F]', 'shadow-[0_0_16px_rgba(198,244,50,0.3)]');
+            b.classList.remove('bg-[#38BDF8]', 'text-[#0A0A0F]', 'shadow-[0_0_16px_rgba(56,189,248,0.3)]');
             b.classList.add('border', 'border-[#26262F]', 'bg-[#13131A]', 'text-[#A1A1AA]');
           }
         });
