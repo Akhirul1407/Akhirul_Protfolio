@@ -15,6 +15,7 @@ export interface SiteConfig {
   formEndpoint: string;
   siteUrl: string;
   description: string;
+  cvUrl: string;
   navLinks: Array<{ label: string; href: string }>;
 }
 
@@ -37,10 +38,12 @@ export const siteConfig: SiteConfig = {
   siteUrl: "https://akhirulislam.pages.dev",
   description:
     "Portfolio of MD. Akhirul Islam, Technical Project Manager with a Computer Science Engineering (CSE) background. Specializing in calm software delivery, API architecture, and high-velocity engineering alignment.",
+  cvUrl: "/Akhirul_Islam_CV.pdf",
   navLinks: [
     { label: "Home", href: "/" },
     { label: "Work", href: "/projects" },
+    { label: "Experience", href: "/experience" },
+    { label: "Education", href: "/education" },
     { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
   ],
 };

@@ -17,7 +17,7 @@ const isActive = (href: string) => {
 
 <header class="sticky top-0 z-50 w-full px-4 pt-3.5 pb-2 transition-all duration-300 md:px-6">
   <!-- Floating Glass Island Capsule -->
-  <div class="mx-auto flex h-16 max-w-[1120px] items-center justify-between rounded-full border border-[#26262F]/90 bg-[#13131A]/85 px-4 sm:px-6 shadow-[0_12px_36px_rgba(0,0,0,0.45)] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.07)] backdrop-blur-xl transition-all duration-300 hover:border-[#3A3A46]">
+  <div class="mx-auto flex h-16 max-w-[1280px] items-center justify-between rounded-full border border-[#26262F]/90 bg-[#13131A]/85 px-4 sm:px-6 shadow-[0_12px_36px_rgba(0,0,0,0.45)] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.07)] backdrop-blur-xl transition-all duration-300 hover:border-[#3A3A46]">
     
     <!-- Brand / Logo Mark -->
     <a
@@ -74,10 +74,16 @@ const isActive = (href: string) => {
       <!-- Divider -->
       <div class="h-4 w-[1px] bg-[#26262F] mx-2"></div>
 
-      <!-- CTA Button: Cyan Outlined Pill with Micro-Interaction -->
+      <!-- CTA Button: Cyan Outlined Pill with Micro-Interaction (acts as primary Contact CTA) -->
       <a
         href="/contact"
-        class="group inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8] bg-[#38BDF8]/10 px-4 py-1.5 text-xs font-bold text-[#38BDF8] transition-all duration-200 hover:bg-[#38BDF8] hover:text-[#0A0A0F] hover:shadow-[0_0_24px_rgba(56,189,248,0.4)] hover:scale-105"
+        class:list={[
+          "group inline-flex items-center gap-1.5 rounded-full border border-[#38BDF8] px-4 py-1.5 text-xs font-bold transition-all duration-200 hover:scale-105",
+          isActive("/contact")
+            ? "bg-[#38BDF8] text-[#0A0A0F] shadow-[0_0_20px_rgba(56,189,248,0.5)]"
+            : "bg-[#38BDF8]/10 text-[#38BDF8] hover:bg-[#38BDF8] hover:text-[#0A0A0F] hover:shadow-[0_0_24px_rgba(56,189,248,0.4)]"
+        ]}
+        aria-current={isActive("/contact") ? "page" : undefined}
       >
         <span>Let's talk</span>
         <svg
@@ -113,7 +119,7 @@ const isActive = (href: string) => {
   <!-- Mobile Collapsible Menu (Floating Card) -->
   <div
     id="mobile-menu"
-    class="hidden mx-auto mt-2 max-w-[1120px] rounded-3xl border border-[#26262F] bg-[#13131A]/95 p-5 shadow-2xl backdrop-blur-2xl md:hidden transition-all duration-300"
+    class="hidden mx-auto mt-2 max-w-[1280px] rounded-3xl border border-[#26262F] bg-[#13131A]/95 p-5 shadow-2xl backdrop-blur-2xl md:hidden transition-all duration-300"
     aria-hidden="true"
   >
     <nav class="flex flex-col gap-3" aria-label="Mobile Navigation">

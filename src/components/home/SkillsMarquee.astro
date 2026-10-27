@@ -7,46 +7,73 @@ const skills = [
   "API & Global Distribution",
   "Stakeholder Communication",
   "Risk & Scope Mitigation",
-  "Sprint Velocity",
-  "Production Readiness",
+  "Sprint Velocity Optimization",
+  "High-Reliability Architecture",
+  "Cross-Functional Alignment",
 ];
 ---
 
-<section class="relative w-full border-y border-[#26262F] bg-[#0E0E14] py-5 overflow-hidden" aria-label="Core Capabilities">
+<section class="relative w-full border-y border-[#26262F] bg-gradient-to-b from-[#0E0E16]/90 via-[#0A0A10]/95 to-[#0E0E16]/90 py-6 overflow-hidden backdrop-blur-xl" aria-label="Core Capabilities">
+  <!-- Top subtle glowing hairline accent -->
+  <div class="pointer-events-none absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#38BDF8]/40 to-transparent" aria-hidden="true"></div>
+
+  <!-- Marquee with smooth gradient fade masks on both sides -->
   <div class="marquee-wrapper flex select-none overflow-hidden group">
-    <!-- First track -->
-    <div class="marquee-track flex shrink-0 items-center gap-8 py-1 group-hover:[animation-play-state:paused]">
+    <!-- Track 1 -->
+    <div class="marquee-track flex shrink-0 items-center gap-6 py-1 group-hover:[animation-play-state:paused]">
       {
         skills.map((skill) => (
-          <div class="flex items-center gap-8 shrink-0">
-            <span class="font-['Space_Grotesk'] text-lg md:text-2xl font-bold tracking-tight text-[#F4F4F5] uppercase">
-              {skill}
-            </span>
-            <span class="text-[#38BDF8] text-sm md:text-base select-none" aria-hidden="true">✦</span>
+          <div class="flex items-center gap-6 shrink-0">
+            <div class="group/pill flex items-center gap-2.5 rounded-full border border-[#26262F]/90 bg-[#13131D]/85 px-5 py-2 shadow-[0_4px_16px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all duration-300 hover:border-[#38BDF8]/70 hover:bg-[#181826] hover:shadow-[0_0_24px_rgba(56,189,248,0.3)] hover:scale-105">
+              <span class="relative flex h-2 w-2 shrink-0">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#38BDF8] opacity-75"></span>
+                <span class="relative inline-flex h-2 w-2 rounded-full bg-[#38BDF8]"></span>
+              </span>
+              <span class="font-['Space_Grotesk'] text-xs sm:text-sm font-bold tracking-wider text-[#E4E4E7] uppercase transition-colors group-hover/pill:text-[#38BDF8]">
+                {skill}
+              </span>
+            </div>
+            <span class="text-[#38BDF8]/40 text-xs select-none" aria-hidden="true">✦</span>
           </div>
         ))
       }
     </div>
 
-    <!-- Duplicate track for seamless infinite loop -->
-    <div class="marquee-track flex shrink-0 items-center gap-8 py-1 group-hover:[animation-play-state:paused]" aria-hidden="true">
+    <!-- Track 2 (Seamless clone) -->
+    <div class="marquee-track flex shrink-0 items-center gap-6 py-1 group-hover:[animation-play-state:paused]" aria-hidden="true">
       {
         skills.map((skill) => (
-          <div class="flex items-center gap-8 shrink-0">
-            <span class="font-['Space_Grotesk'] text-lg md:text-2xl font-bold tracking-tight text-[#F4F4F5] uppercase">
-              {skill}
-            </span>
-            <span class="text-[#38BDF8] text-sm md:text-base select-none">✦</span>
+          <div class="flex items-center gap-6 shrink-0">
+            <div class="group/pill flex items-center gap-2.5 rounded-full border border-[#26262F]/90 bg-[#13131D]/85 px-5 py-2 shadow-[0_4px_16px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all duration-300 hover:border-[#38BDF8]/70 hover:bg-[#181826] hover:shadow-[0_0_24px_rgba(56,189,248,0.3)] hover:scale-105">
+              <span class="relative flex h-2 w-2 shrink-0">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#38BDF8] opacity-75"></span>
+                <span class="relative inline-flex h-2 w-2 rounded-full bg-[#38BDF8]"></span>
+              </span>
+              <span class="font-['Space_Grotesk'] text-xs sm:text-sm font-bold tracking-wider text-[#E4E4E7] uppercase transition-colors group-hover/pill:text-[#38BDF8]">
+                {skill}
+              </span>
+            </div>
+            <span class="text-[#38BDF8]/40 text-xs select-none" aria-hidden="true">✦</span>
           </div>
         ))
       }
     </div>
   </div>
+
+  <!-- Bottom subtle glowing hairline accent -->
+  <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#818CF8]/30 to-transparent" aria-hidden="true"></div>
 </section>
 
 <style>
+  .marquee-wrapper {
+    /* Smooth gradient edge fade mask on left and right */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
   .marquee-track {
-    animation: scrollMarquee 32s linear infinite;
+    /* 68s creates a dignified, calm, readable speed */
+    animation: scrollMarquee 68s linear infinite;
   }
 
   @keyframes scrollMarquee {
@@ -64,6 +91,8 @@ const skills = [
     }
     .marquee-wrapper {
       overflow-x: auto;
+      mask-image: none;
+      -webkit-mask-image: none;
     }
   }
 </style>

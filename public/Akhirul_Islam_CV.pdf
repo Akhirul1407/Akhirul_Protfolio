@@ -1,0 +1,509 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 6 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 5813 >>
+stream
+BT
+/F2 17 Tf
+0.353 0.247 0.878 rg
+40 788.29 Td
+(InnoMessage ó My Performance Report) Tj
+ET
+BT
+/F2 12 Tf
+0.060 0.090 0.160 rg
+40 768.29 Td
+(Md. Akhirul Islam) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+40 754.69 Td
+(Period: This Month  \(2026-08-01 to 2026-08-17\)  ∑  Generated 2026-08-17 18:17) Tj
+ET
+1 w
+0.820 0.840 0.930 RG
+40 747.89 m
+555.28 747.89 l
+S
+BT
+/F2 11 Tf
+0.060 0.090 0.160 rg
+40 719.09 Td
+(Overall Performance Score) Tj
+ET
+BT
+/F2 22 Tf
+0.060 0.550 0.400 rg
+40 690.29 Td
+(48.4 / 100) Tj
+ET
+0.930 0.940 0.980 rg
+240 697.89 260 14 re
+f
+0.220 0.600 0.860 rg
+240 697.89 125.84 14 re
+f
+0.75 w
+0.820 0.840 0.930 RG
+40 675.89 m
+555.28 675.89 l
+S
+BT
+/F2 10 Tf
+0.060 0.090 0.160 rg
+40 649.89 Td
+(Metric) Tj
+ET
+BT
+/F2 10 Tf
+0.060 0.090 0.160 rg
+195 649.89 Td
+(Module) Tj
+ET
+BT
+/F2 10 Tf
+0.060 0.090 0.160 rg
+305 649.89 Td
+(Value) Tj
+ET
+BT
+/F2 10 Tf
+0.060 0.090 0.160 rg
+405 649.89 Td
+(Score) Tj
+ET
+0.75 w
+0.820 0.840 0.930 RG
+40 643.89 m
+555.28 643.89 l
+S
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 621.89 Td
+(Chat Response Time) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 622.69 Td
+(Unified Inbox) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 621.89 Td
+(N/A) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 621.89 Td
+(n/a) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 603.89 Td
+(Answer Rate) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 604.69 Td
+(Unified Inbox) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 603.89 Td
+(N/A) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 603.89 Td
+(n/a) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 585.89 Td
+(Productivity) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 586.69 Td
+(Unified Inbox) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 585.89 Td
+(N/A) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 585.89 Td
+(n/a) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 567.89 Td
+(SDQ First Response) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 568.69 Td
+(Support Desk Query) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 567.89 Td
+(13h 16m) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 567.89 Td
+(0) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 549.89 Td
+(SDQ Resolution Time) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 550.69 Td
+(Support Desk Query) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 549.89 Td
+(3d 4h) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 549.89 Td
+(0) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 531.89 Td
+(SDQ SLA Compliance) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 532.69 Td
+(Support Desk Query) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 531.89 Td
+(30%) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 531.89 Td
+(30) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 513.89 Td
+(SDQ Reopen Rate) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 514.69 Td
+(Support Desk Query) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 513.89 Td
+(0%) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 513.89 Td
+(100) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 495.89 Td
+(Team Task On-Time Rate) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 496.69 Td
+(Team Tasks) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 495.89 Td
+(100%) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 495.89 Td
+(100) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 477.89 Td
+(Team Task Throughput) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 478.69 Td
+(Team Tasks) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 477.89 Td
+(0.1/day) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 477.89 Td
+(3) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 459.89 Td
+(Agile On-Time Rate) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 460.69 Td
+(Agile Projects) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 459.89 Td
+(100%) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 459.89 Td
+(100) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 441.89 Td
+(Agile Throughput) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 442.69 Td
+(Agile Projects) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 441.89 Td
+(0.7/day) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 441.89 Td
+(33) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 423.89 Td
+(Brand & Ads On-Time Rate) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 424.69 Td
+(Branding & Ads) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 423.89 Td
+(N/A) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 423.89 Td
+(n/a) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+40 405.89 Td
+(Brand & Ads Throughput) Tj
+ET
+BT
+/F1 9 Tf
+0.400 0.450 0.550 rg
+195 406.69 Td
+(Branding & Ads) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.090 0.160 rg
+305 405.89 Td
+(N/A) Tj
+ET
+BT
+/F1 10 Tf
+0.060 0.550 0.400 rg
+405 405.89 Td
+(n/a) Tj
+ET
+BT
+/F2 11 Tf
+0.060 0.090 0.160 rg
+40 361.09 Td
+(Coach Recommendations) Tj
+ET
+BT
+/F2 10 Tf
+0.060 0.090 0.160 rg
+40 345.89 Td
+([LOW] Keep your momentum) Tj
+ET
+BT
+/F1 8.5 Tf
+0.400 0.450 0.550 rg
+48 334.09 Td
+(No urgent gaps found ó your queue is clean and your KPIs are healthy. Get ahead of upcoming deadlines, or invest the quiet time in) Tj
+ET
+BT
+/F2 11 Tf
+0.060 0.090 0.160 rg
+40 302.09 Td
+(Trend) Tj
+ET
+0.75 w
+0.820 0.840 0.930 RG
+40 204.89 m
+555.28 204.89 l
+S
+0.365 0.694 0.902 rg
+42 204.89 26.311 0 re
+f
+0.365 0.694 0.902 rg
+72.311 204.89 26.311 12.87 re
+f
+0.365 0.694 0.902 rg
+102.621 204.89 26.311 0 re
+f
+0.365 0.694 0.902 rg
+132.932 204.89 26.311 0 re
+f
+0.365 0.694 0.902 rg
+163.242 204.89 26.311 0 re
+f
+0.365 0.694 0.902 rg
+193.553 204.89 26.311 0 re
+f
+0.365 0.694 0.902 rg
+223.864 204.89 26.311 0 re
+f
+0.365 0.694 0.902 rg
+254.174 204.89 26.311 0 re
+f
+0.365 0.694 0.902 rg
+284.485 204.89 26.311 22.5 re
+f
+0.365 0.694 0.902 rg
+314.795 204.89 26.311 65.97 re
+f
+0.365 0.694 0.902 rg
+345.106 204.89 26.311 29.97 re
+f
+0.365 0.694 0.902 rg
+375.416 204.89 26.311 29.97 re
+f
+0.365 0.694 0.902 rg
+405.727 204.89 26.311 37.53 re
+f
+0.365 0.694 0.902 rg
+436.038 204.89 26.311 25.02 re
+f
+0.365 0.694 0.902 rg
+466.348 204.89 26.311 0 re
+f
+0.365 0.694 0.902 rg
+496.659 204.89 26.311 60.93 re
+f
+0.365 0.694 0.902 rg
+526.969 204.89 26.311 56.25 re
+f
+BT
+/F1 8 Tf
+0.580 0.640 0.720 rg
+40 186.49 Td
+(Sat 1  ->  Mon 17) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000218 00000 n 
+0000000360 00000 n 
+0000006224 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+6326
+%%EOF

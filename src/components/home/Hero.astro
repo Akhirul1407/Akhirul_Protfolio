@@ -18,7 +18,7 @@ import { siteConfig } from "../../config/site";
     <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0F]/70 via-transparent to-[#0A0A0F]"></div>
   </div>
 
-  <div class="relative z-10 mx-auto max-w-[1120px] px-6">
+  <div class="relative z-10 mx-auto max-w-[1280px] px-6">
     <div class="flex flex-col items-start max-w-4xl">
       <!-- Top Announcement / Live Flagship Case Study Pill -->
       <a
@@ -97,6 +97,27 @@ import { siteConfig } from "../../config/site";
           >
             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
+        </a>
+
+        <!-- CV Preview & Download Button (Opens in new tab like Nasif Kabir portfolio) -->
+        <a
+          href={siteConfig.cvUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover-btn group inline-flex min-h-[48px] items-center justify-center gap-2.5 rounded-full border border-[#38BDF8]/40 bg-[#38BDF8]/10 px-6 py-3 text-base font-bold text-[#38BDF8] backdrop-blur-md transition-all hover:border-[#38BDF8] hover:bg-[#38BDF8] hover:text-[#0A0A0F] hover:shadow-[0_0_24px_rgba(56,189,248,0.35)]"
+          aria-label="View and Download CV (Opens PDF in new tab)"
+        >
+          <svg
+            class="h-4 w-4 transition-transform duration-200 group-hover:scale-110"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2.5"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span>Download CV</span>
         </a>
 
         <!-- Secondary Button -->

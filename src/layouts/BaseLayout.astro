@@ -59,22 +59,58 @@ const pageTitle = title.includes(siteConfig.shortName) ? title : `${title} · ${
 
     <slot name="head" />
   </head>
-  <body class="flex min-h-screen flex-col bg-[#0A0A0F] text-[#F4F4F5] selection:bg-[#38BDF8] selection:text-[#0A0A0F]">
+  <body class="relative flex min-h-screen flex-col bg-[#0A0A0F] text-[#F4F4F5] selection:bg-[#38BDF8] selection:text-[#0A0A0F]">
     <!-- Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">
       Skip to main content
     </a>
 
+    <!-- Architectural Tech-Grid & Aurora Atmosphere (Option 1: Linear & Raycast style) -->
+    <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <!-- Top Glowing Horizon Accent Beam -->
+      <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#38BDF8]/60 to-transparent"></div>
+
+      <!-- Grand Center Top Aurora Core (Sky Cyan & Deep Indigo) -->
+      <div class="absolute -top-[280px] left-1/2 -translate-x-1/2 h-[600px] w-[950px] rounded-[100%] bg-gradient-to-b from-[#38BDF8]/25 via-[#6366F1]/18 to-transparent blur-[130px]"></div>
+
+      <!-- Top Left Cyan Ambient Aura -->
+      <div class="absolute -top-[120px] -left-[140px] h-[550px] w-[550px] rounded-full bg-[#06B6D4]/14 blur-[140px]"></div>
+
+      <!-- Mid Right Indigo/Purple Ambient Glow -->
+      <div class="absolute top-[32%] -right-[160px] h-[650px] w-[650px] rounded-full bg-[#818CF8]/12 blur-[160px]"></div>
+
+      <!-- Mid-Lower Left Teal Aurora Wave -->
+      <div class="absolute top-[65%] -left-[160px] h-[550px] w-[550px] rounded-full bg-[#38BDF8]/10 blur-[150px]"></div>
+
+      <!-- Bottom Right Violet/Cyan Glow -->
+      <div class="absolute -bottom-[120px] -right-[100px] h-[520px] w-[520px] rounded-full bg-[#8B7CF6]/12 blur-[160px]"></div>
+
+      <!-- Subtle Radial Vignette for Depth & High-Contrast Readability -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(8,8,12,0.45)_100%)]"></div>
+
+      <!-- Architectural Tech Framing Lines (Visible on 2xl & wide displays) -->
+      <div class="mx-auto h-full max-w-[1440px] px-6 hidden 2xl:block">
+        <div class="h-full w-full border-x border-[#26262F]/50 flex justify-between">
+          <div class="w-[1px] h-full bg-gradient-to-b from-transparent via-[#38BDF8]/20 to-transparent"></div>
+          <div class="w-[1px] h-full bg-gradient-to-b from-transparent via-[#818CF8]/20 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Shared Header -->
-    <Header currentPath={Astro.url.pathname} />
+    <div class="relative z-20">
+      <Header currentPath={Astro.url.pathname} />
+    </div>
 
     <!-- Main Page Content -->
-    <main id="main-content" class="flex-1 focus:outline-none">
+    <main id="main-content" class="relative z-10 flex-1 focus:outline-none">
       <slot />
     </main>
 
     <!-- Shared Footer -->
-    <Footer />
+    <div class="relative z-10">
+      <Footer />
+    </div>
 
     <!-- Progressive Scroll Reveal Fallback -->
     <script>
